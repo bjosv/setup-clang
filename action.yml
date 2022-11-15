@@ -205,8 +205,8 @@ runs:
             throw "Sorry, installing Clang is unsupported on $os"
         }
 
-        echo "::set-output name=clang::$clang"
-        echo "::set-output name=clangxx::$clangxx"
+        echo "clang=$clang" >> $GITHUB_OUTPUT
+        echo "clangxx=$clangxx" >> $GITHUB_OUTPUT
       shell: pwsh
 
     - run: |
